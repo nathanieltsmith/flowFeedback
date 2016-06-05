@@ -1,0 +1,36 @@
+{
+  "name": "flowfeedback",
+  "version": "1.0.0",
+  "description": "<img src=\"http://montanacodeschool.com/wp-content/uploads/2015/06/MCS_LOGO_v1.png\" width=\"200\" align=\"right\"/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js  --recursive",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanieltsmith/flowFeedback.git"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "author": "Nathan Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanieltsmith/flowFeedback/issues"
+  },
+  "homepage": "https://github.com/nathanieltsmith/flowFeedback",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "chai-immutable": "^1.5.4",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1"
+  }
+}
