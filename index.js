@@ -3,3 +3,4 @@ import { startServer } from './server/server'
 
 export const store = makeStore()
 startServer(store)
+console.log('server running')

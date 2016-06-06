@@ -1,4 +1,4 @@
-import { subscribe, unsubscribe, changeStatus, INITIAL_STATE } from './core'
+import { subscribe, unsubscribe, changeFeeling, INITIAL_STATE } from './core'
 
 export default function reducer (state = INITIAL_STATE, action) {
   console.log('REDUCING', action)
@@ -7,8 +7,8 @@ export default function reducer (state = INITIAL_STATE, action) {
       return subscribe(state, action.user)
     case 'UNSUBSCRIBE':
       return unsubscribe(state, action.user)
-    case 'CHANGESTATUS':
-      return changeStatus(state, action.user, action.feeling)
+    case 'CHANGEFEELING':
+      return changeFeeling(state, action.user, action.feeling)
   }
   return state
 }
