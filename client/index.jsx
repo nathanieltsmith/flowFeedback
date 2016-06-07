@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import _ from 'lodash'
 import getClientId from './client_id';
 
-const socket = io('http://localhost:8090')
+const socket = io('https://young-sierra-33180.herokuapp.com/:8090')
 
 socket.emit('action', {type: 'CHANGEFEELING', user: getClientId(), feeling: 'Flow'})
 
