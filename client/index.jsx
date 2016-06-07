@@ -47,7 +47,6 @@ var ClassPoller = React.createClass({
   render: function(){
     return (
       <div>
-         <Report  serverState={this.state.serverState}/>
          <Buttons serverState={this.state.serverState}/>
       </div>)
   }
@@ -65,25 +64,6 @@ var Buttons = React.createClass({
   }
 })
 
-var Report = React.createClass({
-  render : function(){
-    return (<div>
-      <ReportType feeling="Panic" color="red" serverState={this.state.serverState}/>
-      <ReportType feeling="Arousal" color="orange" serverState={this.state.serverState}/>
-      <ReportType feeling="Flow" color="green" serverState={this.state.serverState}/>
-      <ReportType feeling="Boredom" color="blue" serverState={this.state.serverState}/>
-      </div>)
-  }
-})
-
-var ReportType = React.createClass({
-  computeTotal: function() {
-   return _.values(this.props.serverState).filter(x => x === this.props.feeling).length
-  },
-  render: function(){
-    return (<p><h1 style={{color: this.props.color}}>{this.props.feeling}: {this.computeTotal()}</h1></p>)
-  }
-})
 
 var LearningStatus = React.createClass({
   isSelected: function(){
